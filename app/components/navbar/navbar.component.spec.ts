@@ -15,7 +15,7 @@ describe('a navbar component', () => {
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([NavbarComponent], (NavbarComponent) => {
+	beforeEach(inject([NavbarComponent], (NavbarComponent:NavbarComponent) => {
 		component = NavbarComponent;
 	}));
 

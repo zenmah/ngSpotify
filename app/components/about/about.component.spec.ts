@@ -15,7 +15,7 @@ describe('a about component', () => {
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([AboutComponent], (AboutComponent) => {
+	beforeEach(inject([AboutComponent], (AboutComponent:AboutComponent) => {
 		component = AboutComponent;
 	}));
 

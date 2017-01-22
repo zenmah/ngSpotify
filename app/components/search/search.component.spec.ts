@@ -15,7 +15,7 @@ describe('a search component', () => {
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([SearchComponent], (SearchComponent) => {
+	beforeEach(inject([SearchComponent], (SearchComponent:SearchComponent) => {
 		component = SearchComponent;
 	}));
 

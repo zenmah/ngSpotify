@@ -1,1 +1,13 @@
-<div class="search"> Hello SearchComponent! </div>
+<h1>Need Music?</h1>
+
+<p class="lead">Use ngSpotify to browse new releases and find your favorite songs
+  <br> All you
+</p>
+<form clas="well">
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Seach Artists" 
+      [(ngModel)]="SearchText" name="SearchText" (keyup)="searchArtists()">
+  </div>
+</form>
+<p> Total Artists found: {{totalArtists}}</p>
+<div *ngFor="let artist of artists"><a href="{{artist.uri}}">{{artist.name}}</a> </div>
