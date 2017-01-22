@@ -1,5 +1,50 @@
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+
+.artist-thumb{
+  width:80px;
+  height: auto;
+  float: left;
+  margin-right:10px; 
+}
+
+.main{
+  border-bottom: darkgrey 1px solid;
+  padding: 30px;
+}
+
+.album{
+  text-align: center;
+  background: darkgrey;
+  padding: 10px 20px;
+  border: lightgrey 1px solid;
+}
+.album-thumb{
+  width: 100%
+}
+
+.artist-header{
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px darkgrey;
+}
+
+.artist-albums .well{
+  margin-bottom: 20px;
+  overflow: auto;
+  min-height: 400px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 20px;
 }

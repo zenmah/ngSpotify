@@ -5,9 +5,36 @@
 </p>
 <form clas="well">
   <div class="form-group">
-    <input class="form-control" type="text" placeholder="Seach Artists" 
-      [(ngModel)]="SearchText" name="SearchText" (keyup)="searchArtists()">
+    <input class="form-control" type="text" placeholder="Seach Artists" [(ngModel)]="SearchText" name="SearchText" (keyup)="searchArtists()">
   </div>
 </form>
+<div *ngIf="artists">
 <p> Total Artists found: {{totalArtists}}</p>
-<div *ngFor="let artist of artists"><a href="{{artist.uri}}">{{artist.name}}</a> </div>
+<div *ngFor="let artist of artists">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="search-res well">
+        <div class="row">
+          <div class="col-md-2">
+            <div *ngIf="artist.images.length > 0">
+              <img class="artist-thumb img-circle"  src="{{artist.images[0].url}}">
+            </div>
+            
+          </div>
+          <div class="col-md-10">
+            <h4><a routerLink="/artist/{{artist.id}}">{{artist.name}}</a></h4>
+            <div>
+              <span *ngFor="let genre of artist.genres"> {{genre}} </span>
+            </div>
+            <a href="{{artist.uri}}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
